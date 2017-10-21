@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@drawable/ba"
+    android:layout_height="match_parent">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        >
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:entries="@array/level"
+            android:id="@+id/select"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:id = "@+id/text1"
+            android:textSize="30sp"
+            android:layout_marginBottom="20dp"
+            android:textColor="#35c757"
+            android:layout_above="@+id/player_name"
+            android:layout_centerHorizontal="true"/>
+
+        <EditText
+            android:id="@+id/player_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/line1"
+            android:hint="Enter your name"
+            android:textSize="20sp"
+            android:textStyle = "bold"
+            android:textColorHint="#fafafa"
+            android:background="@android:color/transparent"
+            android:gravity="center_horizontal"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Difficulty Level"
+            android:id="@+id/diff"
+            android:layout_centerHorizontal="true"
+            android:textSize="25sp"
+            android:textColor="#3cd161"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/select"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#fafafa"
+            android:layout_above="@+id/diff"
+            android:layout_marginBottom="20dp"
+            android:id = "@+id/line1"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#fafafa"
+            android:layout_below="@+id/select"
+            android:layout_marginTop="20dp"
+            android:id = "@+id/line2"
+            />
+
+
+        <Button
+            android:id="@+id/start_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_text_box3"
+            android:text="Start"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="60dp"
+            android:textColor="#050705"
+            android:layout_below="@id/line2"
+            android:layout_centerHorizontal="true"
+            android:onClick="buttonClicked"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

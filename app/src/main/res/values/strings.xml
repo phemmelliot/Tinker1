@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Tinker</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="level">
+        <item>Medium</item>
+        <item>Difficult</item>
+        <item>Easy</item>
+    </string-array>
+</resources>
